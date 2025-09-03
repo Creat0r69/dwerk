@@ -103,7 +103,7 @@ body{
     display: inline-block;
     padding: 12px 22px;
     background: var(--white);
-    color: var(--orange);
+    color: #009fff; /* same as header */
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
@@ -114,7 +114,7 @@ body{
 }
 .btn:hover{
     transform: translateY(-1px);
-    background: #fff7f3;
+    background: #f3ffff;
 }
 
 /* CONTENT WHITE AREA */
@@ -131,7 +131,7 @@ body{
 }
 .section__title{
     font-size: clamp(22px, 3vw, 28px);
-    color: var(--orange-dark);
+    color: #009fff; /* same as header */;
     margin: 0 0 22px;
     text-transform: lowercase;
     letter-spacing: .02em;
@@ -141,13 +141,12 @@ body{
 .grid{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: min(70%, 1000px); /* optional cap */
     margin: 0 auto;          /* <-- centers the grid */
 }
 .grid img{
     width: 100%;
-    height: 130px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 6px 14px rgba(0,0,0,.08);

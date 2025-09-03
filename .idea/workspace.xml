@@ -7,6 +7,7 @@
     <list default="true" id="d79a6664-6c42-4fee-a43e-b5b037cc4afa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syles.css" beforeDir="false" afterPath="$PROJECT_DIR$/syles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756859439099</updated>
-      <workItem from="1756859440178" duration="6412000" />
+      <workItem from="1756859440178" duration="6904000" />
     </task>
     <servers />
   </component>
