@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dwerk</title>
+    <link rel="icon" type="image/png" href="dwerk_pfp.png">
+
+    <!-- FIXED: styles.css -->
+    <link href="syles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Minimal modal CSS — you can move this into styles.css */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 24px;
+            cursor: zoom-out; /* hint you can click to close */
+        }
+        .modal img {
+            max-width: 95vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.4);
+            cursor: default;
+        }
+        .modal .close {
+            position: absolute;
+            top: 16px;
+            right: 22px;
+            font-size: 40px;
+            color: #fff;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<header class="band band--top">
+    <!-- ... your existing header ... -->
+    <div class="hero container">
+        <p class="hero__sub">GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump</p>
+        <a class="btn" href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump">get Dwerk</a>
+    </div>
+</header>
+
+<main class="content">
+    <section class="container section">
+        <h2 class="section__title">Dwerk MEMES</h2>
+        <div class="grid">
+            <img src="1.gif" alt="meme 1" onclick="openModal(this.src)">
+            <img src="2.gif" alt="meme 2" onclick="openModal(this.src)">
+            <img src="3.gif" alt="meme 3" onclick="openModal(this.src)">
+            <img src="4.gif" alt="meme 4" onclick="openModal(this.src)">
+            <img src="5.gif" alt="meme 5" onclick="openModal(this.src)">
+            <img src="6.gif" alt="meme 6" onclick="openModal(this.src)">
+            <img src="7.gif" alt="meme 7" onclick="openModal(this.src)">
+        </div>
+    </section>
+</main>
+
+<footer class="band band--bottom">
+    <div class="container footer">
+        <span class="chevron">◤</span><span class="brand">Dwerk</span><span class="chevron">◢</span>
+    </div>
+</footer>
+
+<!-- ADD: modal markup -->
+<div id="modal" class="modal" onclick="closeModal(event)">
+    <span class="close" aria-label="Close">&times;</span>
+    <img id="modalImg" alt="">
+</div>
+
+<script>
+    function openModal(src) {
+        const modal = document.getElementById('modal');
+        const img = document.getElementById('modalImg');
+        img.src = src;
+        modal.style.display = 'flex';
+        // optional: lock background scroll
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close when clicking overlay or the X (but not when clicking the image itself)
+    function closeModal(e) {
+        const modal = document.getElementById('modal');
+        if (e.target.id === 'modal' || e.target.classList.contains('close')) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Also close on ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+
+</body>
+</html>
