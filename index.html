@@ -46,24 +46,88 @@
 <header class="band band--top">
     <div class="nav container">
         <div class="nav__left">
-            <!-- tiny decorative dots like the screenshot -->
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <a href="index.html">
+                <img src="logo.png" alt="Dwerk Logo" class="logo">
+            </a>
         </div>
+
         <nav class="nav__right" style="padding-right: 30px">
             <a href="https://dexscreener.com/solana/96j3qvfapedvzwfrkrj8fr6zwzl7yzchma28fdtyjhpz" class="nav__link">dex</a>
             <a href="https://x.com/i/communities/1961984249101492616" class="nav__link">community</a>
         </nav>
     </div>
     <div class="hero container">
-        <p class="hero__sub">GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump</p>
-        <a class="btn" href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump">get Dwerk</a>
+        <img src="main.gif" alt="Dwerk Meme" class="hero__gif">
+        <p class="hero__sub" id="ca">
+            <span class="c1">G</span>
+            <span class="c2">f</span>
+            <span class="c3">b</span>
+            <span class="c4">D</span>
+            <span class="c5">M</span>
+            <span class="c1">q</span>
+            <span class="c2">V</span>
+            <span class="c3">T</span>
+            <span class="c4">p</span>
+            <span class="c5">z</span>
+            <span class="c1">K</span>
+            <span class="c2">1</span>
+            <span class="c3">Q</span>
+            <span class="c4">Z</span>
+            <span class="c5">4</span>
+            <span class="c1">i</span>
+            <span class="c2">Y</span>
+            <span class="c3">J</span>
+            <span class="c4">t</span>
+            <span class="c5">Q</span>
+            <span class="c1">4</span>
+            <span class="c2">H</span>
+            <span class="c3">B</span>
+            <span class="c4">H</span>
+            <span class="c5">r</span>
+            <span class="c1">1</span>
+            <span class="c2">T</span>
+            <span class="c3">j</span>
+            <span class="c4">H</span>
+            <span class="c5">p</span>
+            <span class="c1">w</span>
+            <span class="c2">3</span>
+            <span class="c3">w</span>
+            <span class="c4">T</span>
+            <span class="c5">y</span>
+            <span class="c1">f</span>
+            <span class="c2">b</span>
+            <span class="c3">7</span>
+            <span class="c4">K</span>
+            <span class="c5">S</span>
+            <span class="c1">p</span>
+            <span class="c2">u</span>
+            <span class="c3">m</span>
+            <span class="c4">p</span>
+        </p>
+        <div class="btn-group">
+            <button id="copyBtn" class="btn">Copy</button>
+            <a class="btn" href="https://pump.fun/coin/GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump">get Dwerk</a>
+        </div>
+
     </div>
 </header>
 
 <main class="content">
     <section class="container section">
-        <h2 class="section__title">Dwerk MEMES</h2>
+
+        <h2 class="section__title">
+            <span class="c1">D</span>
+            <span class="c2">w</span>
+            <span class="c3">e</span>
+            <span class="c4">r</span>
+            <span class="c5">k</span>
+            &nbsp;
+            <span class="c1">M</span>
+            <span class="c2">E</span>
+            <span class="c3">M</span>
+            <span class="c4">E</span>
+            <span class="c5">S</span>
+        </h2>
         <div class="grid">
             <img src="1.gif" alt="meme 1" onclick="openModal(this.src)">
             <img src="2.gif" alt="meme 2" onclick="openModal(this.src)">
@@ -72,15 +136,12 @@
             <img src="5.gif" alt="meme 5" onclick="openModal(this.src)">
             <img src="6.gif" alt="meme 6" onclick="openModal(this.src)">
             <img src="7.gif" alt="meme 7" onclick="openModal(this.src)">
+            <img src="8.gif" alt="meme 8" onclick="openModal(this.src)">
         </div>
     </section>
+
 </main>
 
-<footer class="band band--bottom">
-    <div class="container footer">
-        <span class="chevron">◤</span><span class="brand">Dwerk</span><span class="chevron">◢</span>
-    </div>
-</footer>
 
 <!-- ADD: modal markup -->
 <div id="modal" class="modal" onclick="closeModal(event)">
@@ -113,6 +174,15 @@
             document.getElementById('modal').style.display = 'none';
             document.body.style.overflow = '';
         }
+    });
+</script>
+<script>
+    document.getElementById("copyBtn").addEventListener("click", () => {
+        navigator.clipboard.writeText("GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump").then(() => {
+            alert("Wallet copied: " + GfbDMqVTpzK1QZ4iYJtQ4HBHr1TjHpw3wTyfb7KSpump);
+        }).catch(err => {
+            console.error("Failed to copy: ", err);
+        });
     });
 </script>
 
